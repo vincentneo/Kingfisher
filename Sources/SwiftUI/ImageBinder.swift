@@ -144,6 +144,13 @@ extension KFImage {
             downloadTask = nil
             loading = false
         }
+        
+        /// Frees loaded image and reset loading states.
+        func freeImage() {
+            loading = false
+            loaded = false
+            loadedImage = nil
+        }
     }
 }
 #endif

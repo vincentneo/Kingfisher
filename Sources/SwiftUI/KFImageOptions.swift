@@ -131,6 +131,15 @@ extension KFImageProtocol {
         context.cancelOnDisappear = flag
         return self
     }
+    
+    /// Sets loaded image to `nil` when the view disappears.
+    ///
+    /// - Parameter flag: A boolean value indicating whether to free loaded image memory on view disappearance.
+    /// - Returns: A Kingfisher-compatible image view.
+    public func freeImageOnDisappear(_ flag: Bool) -> Self {
+        context.freeImageOnDisappear = flag
+        return self
+    }
 
     /// Sets a fade transition for the image task.
     ///

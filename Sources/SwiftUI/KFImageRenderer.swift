@@ -67,6 +67,10 @@ struct KFImageRenderer<HoldingView> : View where HoldingView: KFImageHoldingView
                     if context.cancelOnDisappear {
                         binder.cancel()
                     }
+                    
+                    if context.freeImageOnDisappear {
+                        binder.freeImage()
+                    }
                 }
             }
         }
